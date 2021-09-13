@@ -2,7 +2,7 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 351:
+/***/ 57:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 
@@ -28,7 +28,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.issue = exports.issueCommand = void 0;
 const os = __importStar(__nccwpck_require__(87));
-const utils_1 = __nccwpck_require__(278);
+const utils_1 = __nccwpck_require__(261);
 /**
  * Commands
  *
@@ -100,7 +100,7 @@ function escapeProperty(s) {
 
 /***/ }),
 
-/***/ 186:
+/***/ 890:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 
@@ -134,9 +134,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getState = exports.saveState = exports.group = exports.endGroup = exports.startGroup = exports.info = exports.notice = exports.warning = exports.error = exports.debug = exports.isDebug = exports.setFailed = exports.setCommandEcho = exports.setOutput = exports.getBooleanInput = exports.getMultilineInput = exports.getInput = exports.addPath = exports.setSecret = exports.exportVariable = exports.ExitCode = void 0;
-const command_1 = __nccwpck_require__(351);
-const file_command_1 = __nccwpck_require__(717);
-const utils_1 = __nccwpck_require__(278);
+const command_1 = __nccwpck_require__(57);
+const file_command_1 = __nccwpck_require__(275);
+const utils_1 = __nccwpck_require__(261);
 const os = __importStar(__nccwpck_require__(87));
 const path = __importStar(__nccwpck_require__(622));
 /**
@@ -411,7 +411,7 @@ exports.getState = getState;
 
 /***/ }),
 
-/***/ 717:
+/***/ 275:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 
@@ -441,7 +441,7 @@ exports.issueCommand = void 0;
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const fs = __importStar(__nccwpck_require__(747));
 const os = __importStar(__nccwpck_require__(87));
-const utils_1 = __nccwpck_require__(278);
+const utils_1 = __nccwpck_require__(261);
 function issueCommand(command, message) {
     const filePath = process.env[`GITHUB_${command}`];
     if (!filePath) {
@@ -459,7 +459,7 @@ exports.issueCommand = issueCommand;
 
 /***/ }),
 
-/***/ 278:
+/***/ 261:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -504,7 +504,7 @@ exports.toCommandProperties = toCommandProperties;
 
 /***/ }),
 
-/***/ 514:
+/***/ 287:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 
@@ -539,7 +539,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getExecOutput = exports.exec = void 0;
 const string_decoder_1 = __nccwpck_require__(304);
-const tr = __importStar(__nccwpck_require__(159));
+const tr = __importStar(__nccwpck_require__(726));
 /**
  * Exec a command.
  * Output will be streamed to the live console.
@@ -613,7 +613,7 @@ exports.getExecOutput = getExecOutput;
 
 /***/ }),
 
-/***/ 159:
+/***/ 726:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 
@@ -651,8 +651,8 @@ const os = __importStar(__nccwpck_require__(87));
 const events = __importStar(__nccwpck_require__(614));
 const child = __importStar(__nccwpck_require__(129));
 const path = __importStar(__nccwpck_require__(622));
-const io = __importStar(__nccwpck_require__(436));
-const ioUtil = __importStar(__nccwpck_require__(962));
+const io = __importStar(__nccwpck_require__(893));
+const ioUtil = __importStar(__nccwpck_require__(881));
 const timers_1 = __nccwpck_require__(213);
 /* eslint-disable @typescript-eslint/unbound-method */
 const IS_WINDOWS = process.platform === 'win32';
@@ -1237,7 +1237,7 @@ class ExecState extends events.EventEmitter {
 
 /***/ }),
 
-/***/ 962:
+/***/ 881:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 
@@ -1420,7 +1420,7 @@ exports.getCmdPath = getCmdPath;
 
 /***/ }),
 
-/***/ 436:
+/***/ 893:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 
@@ -1458,7 +1458,7 @@ const assert_1 = __nccwpck_require__(357);
 const childProcess = __importStar(__nccwpck_require__(129));
 const path = __importStar(__nccwpck_require__(622));
 const util_1 = __nccwpck_require__(669);
-const ioUtil = __importStar(__nccwpck_require__(962));
+const ioUtil = __importStar(__nccwpck_require__(881));
 const exec = util_1.promisify(childProcess.exec);
 const execFile = util_1.promisify(childProcess.execFile);
 /**
@@ -1915,7 +1915,7 @@ var __webpack_exports__ = {};
 __nccwpck_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/@actions/core/lib/core.js
-var core = __nccwpck_require__(186);
+var core = __nccwpck_require__(890);
 // EXTERNAL MODULE: external "path"
 var external_path_ = __nccwpck_require__(622);
 var external_path_default = /*#__PURE__*/__nccwpck_require__.n(external_path_);
@@ -1923,20 +1923,23 @@ var external_path_default = /*#__PURE__*/__nccwpck_require__.n(external_path_);
 
 
 class Input {
+    options = {
+        envRegex: /^(?:RENOVATE_\w+|LOG_LEVEL|GOPROXY)$/,
+        configurationFile: {
+            input: 'configurationFile',
+            env: 'RENOVATE_CONFIG_FILE',
+            optional: true,
+        },
+        token: {
+            input: 'token',
+            env: 'RENOVATE_TOKEN',
+            optional: false,
+        },
+    };
+    token;
+    _environmentVariables;
+    _configurationFile;
     constructor() {
-        this.options = {
-            envRegex: /^(?:RENOVATE_\w+|LOG_LEVEL)$/,
-            configurationFile: {
-                input: 'configurationFile',
-                env: 'RENOVATE_CONFIG_FILE',
-                optional: true,
-            },
-            token: {
-                input: 'token',
-                env: 'RENOVATE_TOKEN',
-                optional: false,
-            },
-        };
         this._environmentVariables = new Map(Object.entries(process.env).filter(([key]) => this.options.envRegex.test(key)));
         this.token = this.get(this.options.token.input, this.options.token.env, this.options.token.optional);
         this._configurationFile = this.get(this.options.configurationFile.input, this.options.configurationFile.env, this.options.configurationFile.optional);
@@ -1984,12 +1987,10 @@ class Input {
 
 ;// CONCATENATED MODULE: ./src/docker.ts
 class Docker {
-    constructor() {
-        this.repository = 'renovate/renovate';
-        // renovate: datasource=docker depName=renovate/renovate versioning=docker
-        this.tag = '27.5.0-slim';
-        this.tagSuffix = '-slim';
-    }
+    repository = 'renovate/renovate';
+    // renovate: datasource=docker depName=renovate/renovate versioning=docker
+    tag = '27.5.0-slim';
+    tagSuffix = '-slim';
     image() {
         return `${this.repository}:${this.tag}`;
     }
@@ -2000,7 +2001,7 @@ class Docker {
 /* harmony default export */ const docker = (Docker);
 
 // EXTERNAL MODULE: ./node_modules/@actions/exec/lib/exec.js
-var exec = __nccwpck_require__(514);
+var exec = __nccwpck_require__(287);
 // EXTERNAL MODULE: external "fs"
 var external_fs_ = __nccwpck_require__(747);
 var external_fs_default = /*#__PURE__*/__nccwpck_require__.n(external_fs_);
@@ -2010,10 +2011,12 @@ var external_fs_default = /*#__PURE__*/__nccwpck_require__.n(external_fs_);
 
 
 class Renovate {
+    input;
+    dockerGroupName = 'docker';
+    configFileMountDir = '/github-action';
+    docker;
     constructor(input) {
         this.input = input;
-        this.dockerGroupName = 'docker';
-        this.configFileMountDir = '/github-action';
         this.validateArguments();
         this.docker = new docker();
     }
