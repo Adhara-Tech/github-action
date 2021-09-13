@@ -8,7 +8,7 @@ interface EnvironmentVariable {
 
 class Input {
   readonly options = {
-    envRegex: /^(?:RENOVATE_\w+|LOG_LEVEL)$/,
+    envRegex: /^(?:RENOVATE_\w+|LOG_LEVEL|GOPROXY)$/,
     configurationFile: {
       input: 'configurationFile',
       env: 'RENOVATE_CONFIG_FILE',
